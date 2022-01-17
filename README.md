@@ -68,3 +68,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+### Developer notes
+
+Google Drive API
+    For SCOPES use https://www.googleapis.com/auth/drive.file
+    Use a Google Picker in order to select a file (or file location)
+
+TODO:
+    Still trying to read contents of the Drive file. I've made it to the point of requesting the file,
+        But it's returning a 404 status even though it's using the exact file ID retrieved from the 
+        picker. Wondering if there's an issue with needing to "init" the api with the api key or something? Not sure what's going on there yet... It's also duplicating some of the picker stuff and should be fixed to not duplicate those calls. That could be causing some race conditions as well.

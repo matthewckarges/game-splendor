@@ -6,20 +6,20 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
     control: {
-        //padding: theme.spacing(2),
+        padding: theme.spacing(2),
         margin: theme.spacing(2),
         backgroundImage: props => {
-            console.log(props.card.Image);
-            return props.card ? "url('" + props.card.Image + "')" : null
+            //console.log(props.tile.Image);
+            return props.tile ? "url('" + props.tile.Image + "')" : null
         },
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        height: "260px",
-        width: "190px"
+        height: "130px",
+        width: "130px"
     },
 }));
 
-export default function GemCard(props) {
+export default function Tile(props) {
     //alert(JSON.stringify(props));
     const styles = useStyles(props);
 
@@ -28,7 +28,7 @@ export default function GemCard(props) {
             <CardContent>
                 {/* <img src={props.card.Image} /> */}
                 <Typography>
-                    This is a card
+                    This is a tile
                 </Typography>
             </CardContent>
         </Card>
